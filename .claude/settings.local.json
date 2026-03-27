@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(pip install:*)",
+      "Bash(npm install:*)",
+      "Bash(pip list:*)",
+      "Bash(python seed.py)",
+      "Bash(python -c \"import uvicorn; print\\(uvicorn.__file__\\)\")",
+      "Bash(python -c \"import sys; print\\(sys.executable\\)\")",
+      "Bash(python -c \"import site; print\\(site.getusersitepackages\\(\\)\\); print\\(site.ENABLE_USER_SITE\\)\")",
+      "Bash(chmod +x D:/Preet/gym-saas/start-backend.sh)",
+      "Bash(cygpath -w /usr/bin/bash)",
+      "Bash(find D:/Preet/gym-saas -maxdepth 2 -name .* -type f)",
+      "Bash(wc -l D:/Preet/gym-saas/backend/app/models/*.py D:/Preet/gym-saas/backend/app/schemas/*.py)",
+      "Bash(npm --version)",
+      "Bash(where npm.cmd)",
+      "Bash(where npm:*)",
+      "Bash(npx tsc:*)",
+      "Bash(rm -f gym.db)",
+      "Bash(python -c \":*)",
+      "Bash(timeout 5 python -c \":*)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(find /d/Preet/gym-saas/backend -type f -not -path */node_modules/* -not -path */.venv/* -not -path */__pycache__/* -not -path */.pytest_cache/*)",
+      "Bash(npx vite:*)"
+    ]
+  }
+}

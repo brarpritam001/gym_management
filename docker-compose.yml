@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    container_name: gym-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - backend-data:/app
+    environment:
+      - DATABASE_URL=sqlite:///./gym.db
+      - SECRET_KEY=change-this-in-production
+      - CORS_ORIGINS=["http://localhost","http://localhost:5173"]
+
+  frontend:
+    build: ./frontend
+    container_name: gym-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  backend-data:

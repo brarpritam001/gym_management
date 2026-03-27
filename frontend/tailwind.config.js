@@ -1,0 +1,171 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: "#eef2ff",
+          100: "#e0e7ff",
+          200: "#c7d2fe",
+          300: "#a5b4fc",
+          400: "#818cf8",
+          500: "#6366f1",
+          600: "#4f46e5",
+          700: "#4338ca",
+          800: "#3730a3",
+          900: "#312e81",
+          950: "#1e1b4b",
+        },
+        surface: {
+          0: "#ffffff",
+          50: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+        },
+        dark: {
+          600: "#334155",
+          700: "#1e293b",
+          800: "#0f172a",
+          900: "#020617",
+        },
+      },
+      boxShadow: {
+        "glow-xs": "0 0 8px -2px rgba(99, 102, 241, 0.12)",
+        "glow-sm": "0 0 15px -3px rgba(99, 102, 241, 0.18)",
+        "glow": "0 0 25px -5px rgba(99, 102, 241, 0.25)",
+        "glow-lg": "0 0 40px -8px rgba(99, 102, 241, 0.3)",
+        "glow-xl": "0 0 60px -12px rgba(99, 102, 241, 0.35)",
+        "elevation-1": "0 1px 2px 0 rgba(0,0,0,0.03), 0 1px 3px 0 rgba(0,0,0,0.04)",
+        "elevation-2": "0 2px 4px -1px rgba(0,0,0,0.04), 0 4px 8px -2px rgba(0,0,0,0.06)",
+        "elevation-3": "0 4px 8px -2px rgba(0,0,0,0.05), 0 12px 20px -4px rgba(0,0,0,0.08)",
+        "elevation-4": "0 8px 16px -4px rgba(0,0,0,0.06), 0 24px 40px -8px rgba(0,0,0,0.1)",
+        "elevation-5": "0 12px 24px -6px rgba(0,0,0,0.08), 0 32px 56px -12px rgba(0,0,0,0.12)",
+        "inner-glow": "inset 0 1px 0 0 rgba(255,255,255,0.05)",
+        "inner-highlight": "inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 -1px 0 0 rgba(0,0,0,0.05)",
+        "colored-blue": "0 4px 14px -3px rgba(59, 130, 246, 0.35)",
+        "colored-emerald": "0 4px 14px -3px rgba(16, 185, 129, 0.35)",
+        "colored-amber": "0 4px 14px -3px rgba(245, 158, 11, 0.35)",
+        "colored-violet": "0 4px 14px -3px rgba(139, 92, 246, 0.35)",
+        "colored-primary": "0 4px 14px -3px rgba(79, 70, 229, 0.4)",
+      },
+      borderRadius: {
+        "2xl": "1rem",
+        "3xl": "1.5rem",
+        "4xl": "2rem",
+      },
+      animation: {
+        "fade-in": "fadeIn 0.4s ease-out",
+        "fade-in-up": "fadeInUp 0.5s ease-out",
+        "fade-in-down": "fadeInDown 0.4s ease-out",
+        "scale-in": "scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "slide-in-right": "slideInRight 0.3s ease-out",
+        "slide-in-left": "slideInLeft 0.3s ease-out",
+        "slide-up": "slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+        "shimmer": "shimmer 2s infinite linear",
+        "pulse-soft": "pulseSoft 3s infinite ease-in-out",
+        "float": "float 6s ease-in-out infinite",
+        "float-slow": "float 8s ease-in-out infinite",
+        "count-up": "countUp 0.6s ease-out",
+        "bounce-in": "bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+        "spin-slow": "spin 3s linear infinite",
+        "gradient-shift": "gradientShift 8s ease infinite",
+        "glow-pulse": "glowPulse 2s ease-in-out infinite",
+        "border-flow": "borderFlow 3s linear infinite",
+        "number-tick": "numberTick 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "ripple": "ripple 0.6s ease-out",
+        "progress-fill": "progressFill 1s cubic-bezier(0.34, 1.56, 0.64, 1)",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(16px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeInDown: {
+          "0%": { opacity: "0", transform: "translateY(-10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        scaleIn: {
+          "0%": { opacity: "0", transform: "scale(0.9)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        slideInRight: {
+          "0%": { opacity: "0", transform: "translateX(20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        slideInLeft: {
+          "0%": { opacity: "0", transform: "translateX(-20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        slideUp: {
+          "0%": { opacity: "0", transform: "translateY(100%)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        pulseSoft: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.6" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+        countUp: {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        bounceIn: {
+          "0%": { opacity: "0", transform: "scale(0.3)" },
+          "50%": { transform: "scale(1.05)" },
+          "70%": { transform: "scale(0.9)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        gradientShift: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        glowPulse: {
+          "0%, 100%": { boxShadow: "0 0 15px -3px rgba(99, 102, 241, 0.15)" },
+          "50%": { boxShadow: "0 0 25px -3px rgba(99, 102, 241, 0.3)" },
+        },
+        borderFlow: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "200% 50%" },
+        },
+        numberTick: {
+          "0%": { transform: "translateY(100%)", opacity: "0" },
+          "60%": { transform: "translateY(-8%)" },
+          "100%": { transform: "translateY(0%)", opacity: "1" },
+        },
+        ripple: {
+          "0%": { transform: "scale(0)", opacity: "0.5" },
+          "100%": { transform: "scale(4)", opacity: "0" },
+        },
+        progressFill: {
+          "0%": { width: "0%" },
+          "100%": { width: "var(--progress-width, 100%)" },
+        },
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "glass-gradient": "linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))",
+        "mesh-gradient": "radial-gradient(at 40% 20%, rgba(99, 102, 241, 0.08) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(139, 92, 246, 0.06) 0px, transparent 50%), radial-gradient(at 0% 50%, rgba(59, 130, 246, 0.05) 0px, transparent 50%)",
+        "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E\")",
+      },
+      transitionTimingFunction: {
+        "spring": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "smooth": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "bounce": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+      },
+    },
+  },
+  plugins: [],
+};
